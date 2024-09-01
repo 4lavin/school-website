@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", system-ui;
+    font-weight: 100;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.contact-page .container {
+    width: 80%;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    padding: 10px 10%;
+    background: #fff;
+}
+
+.navbar li {
+    margin-left: 30px;
+}
+
+.nav-links {
+    text-decoration: none;
+    color: #000;
+}
+
+.enroll-link,
+.courses-link,
+.see-more,
+.see-less {
+    background: maroon;
+    padding: 2px 30px;
+    color: #fff;
+}
+
+.see-less {
+    display: none;
+}
+
+.hero {
+    border-radius: 5px;
+    overflow: hidden;
+    /* box-shadow: 0px 0 10px 0px rgba(0,0,0,0.1); */
+}
+
+.hero img {
+    width: 100%;
+}
+
+.icons {
+    font-size: 25px;
+}
+
+.course-image img {
+    width: 100%;
+}
+
+h5 {
+    font-weight: 700;
+}
+
+
+.hide {
+    display: none;
+}
+
+.hide.active {
+    display: flex;
+}
+
+.form-group {
+    height: 50px;
+    width: 100%;
+    margin-bottom: 20px;
+    
+    position: relative;
+}
+
+.form-group label {
+    position: absolute;
+    left: 15px;
+    top: 20px;
+    pointer-events: none;
+}
+
+.form-group:nth-child(4) {
+    height: 150px;
+}
+
+.form-group input {
+    padding: 15px 15px 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    background: #f1f1f1;
+    font-weight: 100;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    transition: .2s;
+}
+
+.form-group input:focus~label,
+.form-group textarea:focus~label,
+.form-group input:not(:placeholder-shown)~label,
+.form-group textarea:not(:placeholder-shown)~label {
+    top: -1px;
+    font-size: medium;
+}
+
+.form-group textarea {
+    padding: 20px 15px 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    background: #f1f1f1;
+    font-weight: 100;
+}
+
+header {
+    z-index: 99
+}
+#send-email button {
+    background: maroon;
+    border: none;
+    width: 100%;
+    padding: 10px 30px;
+    font-weight: 100;
+    color: #fff;
+    border-radius: 2px;
+}
+.menu, .close , .menu-icon{
+    display: none;
+}
+
+@media only screen and (max-width: 1100px) {
+    .col-md {
+        flex-basis: 50%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .col-md {
+        flex-basis: 100%;
+    }
+
+    header .navbar {
+        position: fixed;
+        width: 100%;
+        background: rgba(212, 212, 212, 0.7);
+        backdrop-filter: blur(20px);
+        text-align: center;
+        left: 0;
+        top: 0;
+        display: block;
+        padding: 100px 0;
+        transform: translateY(-500px);
+        z-index: 99;
+    }
+    .navbar.nav-active {
+        transform: translateY(0);
+        transition: .2s;
+    }
+    .navbar li {
+        margin: 20px 0 0;
+    }
+
+    .menu-icon {
+        display: flex;
+        align-items: center;
+    }
+    .enroll-inner {
+        display: none;
+    }
+    .menu {
+        position: relative;
+        display: block;
+        font-size: large;
+    }
+    .close {
+        position: absolute;
+        display: block;
+        font-weight: 700;
+        font-size: large;
+        top: 20px;
+        padding: 5px 10px;
+        border-radius: 20px;
+        right: 10%;
+    }
+    .close:hover {
+        background: #bbbbbb;
+        color: #fff;
+        transition: .2s;
+    }
+    .menu::after {
+        position: absolute;
+        content: "";
+        left: 120%;
+        top: 50%;
+        width: 100%;
+        height: 1px;
+        border-radius: 1px;
+        background: #000;
+    }
+    .menu::before {
+        position: absolute;
+        content: "";
+        left: -120%;
+        top: 50%;
+        width: 100%;
+        height: 1px;
+        border-radius: 1px;
+        background: #000;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    
+}
